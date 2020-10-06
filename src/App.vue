@@ -1,18 +1,24 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Clickydoo @goTime="goActions" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Clickydoo from './components/Clickydoo'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Clickydoo
+  },
+  methods: {
+    goActions(e) {
+      console.log("go actions has been called");
+      console.log(e);
+    }
+  },
 }
 </script>
 
